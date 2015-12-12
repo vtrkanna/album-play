@@ -1,0 +1,46 @@
+<div class="box box-info">
+  <div class="box-header with-border">
+    <h3 class="box-title">Audio Lists</h3>
+  </div>
+  <!-- /.box-header -->
+  <div class="box-body">
+    <div class="table-responsive">
+      <div class="box">
+        <p id="notice"><%= notice %></p>
+        <!--div class="box-header">
+        <h3 class="box-title">Audio 1</h3>
+      </div-->
+      <div class="box-body">
+        <!--Loop start here-->
+        <% @albums.each do |album| %>
+        <div class="attachment-block clearfix">
+          <img class="attachment-img" src="http://jrain.oscitas.netdna-cdn.com/wp-content/uploads/2015/11/html5-music-player-splayer.jpg" alt="Attachment Image">
+          <div class="attachment-pushed">
+            <h4 class="attachment-heading"><%= link_to  album.title, album %></h4>
+            <div class="attachment-text" style="margin-top:10px">
+              <%= audio_tag( album.audio.url, controls: true)%>
+              <div class="comment-text" style="margin-top:10px">
+                <%= album.description %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <% end %>
+        <!--Loop end here-->
+      </div>
+      <!-- /.box-body -->
+      <div class="box-footer"></div>
+      <!-- /.box-footer-->
+    </div>
+  </div>
+  <!-- /.table-responsive -->
+</div>
+  <!-- /.box-body -->
+  <!--div class="box-footer clearfix">
+    <a href="javascript::;" class="btn btn-sm btn-info btn-flat pull-left">Place New Order</a>
+    <a href="javascript::;" class="btn btn-sm btn-default btn-flat pull-right">View All Orders</a>
+  </div-->
+  <!-- /.box-footer -->
+</div>
+
+<%= link_to 'New Album', new_album_path %>

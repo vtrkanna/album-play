@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+<div class="form-group">
+<label></label>
+<%= @album.title %>
+</div>
+<div class="form-group">
+<label>Audio</label>
+<%= audio_tag( @album.audio.url, autoplay: true, controls: true)%>
+</div>
+<div class="form-group">
+<label>Cover Image</label>
+<%= link_to image_tag(@album.image.url(:small)), @album.image.url %>
+</div>
+<%= link_to 'Edit', edit_album_path(@album) %> |
+<%= link_to 'Back', albums_path %>
