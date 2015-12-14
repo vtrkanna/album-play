@@ -14,7 +14,7 @@
         <!--Loop start here-->
         <% @albums.each do |album| %>
         <div class="attachment-block clearfix">
-          <img class="attachment-img" src="http://jrain.oscitas.netdna-cdn.com/wp-content/uploads/2015/11/html5-music-player-splayer.jpg" alt="Attachment Image">
+          <img class="attachment-img" src="<%= album.image.url(:med)%>" alt="Attachment Image">
           <div class="attachment-pushed">
             <h4 class="attachment-heading"><%= link_to  album.title, album %></h4>
             <div class="attachment-text" style="margin-top:10px">
