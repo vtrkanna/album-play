@@ -51,4 +51,5 @@ gem 'pg'
 gem 'paperclip'
 gem "rmagick"
 
+gem 'rspec-rails'
 
